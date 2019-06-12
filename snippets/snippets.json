@@ -1,0 +1,166 @@
+{
+    "scope": "source.squirrel",
+    "completions": {
+        "Console.Print": {
+            "prefix": "cp",
+            "body": [
+                "Console.Print(${1});"
+            ],
+            "description": "Prints to the chat"
+        },
+        "GUILabel": {
+            "prefix": "lbl",
+            "body": [
+                "UI.Label({",
+                "$0 $0 $0 $0 id = \"${1:newLabelID}\"  ",
+                "$0 $0 $0 $0 Text = \"${2:labelText}\" ",
+                "});"
+            ],
+            "description": "Creates a new GUILabel"
+        },
+        "GUIBtn": {
+            "prefix": "btn",
+            "body": [
+                "UI.Button({",
+                "$0 $0 $0 $0 id = \"${1:newButtonID}\"  ",
+                "$0 $0 $0 $0 Text = \"${2:buttonText}\" ",
+                "$0 $0 $0 $0 onClick = function() {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 ",
+                "$0 $0 $0 $0 }",
+                "});"
+            ],
+            "description": "Creates a new GUIButton"
+        },
+        "GUICanvas": {
+            "prefix": "canv",
+            "body": [
+                "UI.Canvas({",
+                "$0 $0 $0 $0 id = \"${1:newCanvasID}\"  ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 ",
+                "});"
+            ],
+            "description": "Creates a new GUICanvas"
+        },
+        "GUISprite": {
+            "prefix": "spr",
+            "body": [
+                "UI.Sprite({",
+                "$0 $0 $0 $0 id = \"${1:newSpriteID}\"  ",
+                "$0 $0 $0 $0 file = \"${2:image.png}\" ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 ",
+                "});"
+            ],
+            "description": "Creates a new GUISprite"
+        },
+        "DataTable": {
+            "prefix": "tbl",
+            "body": [
+                "UI.DataTable({",
+                "$0 $0 $0 $0 id = \"${1:newTableID}\"  ",
+                "$0 $0 $0 $0 rows = ${2:10} ",
+                "$0 $0 $0 $0 columns = [ ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 { header = \"Column1\", field = \"col1\"},",
+                "$0 $0 $0 $0 $0 $0 $0 $0 { header = \"Column2\", field = \"col2\"},",
+                "$0 $0 $0 $0 ]",
+                "$0 $0 $0 $0 data = [ ]",
+                "});"
+            ],
+            "description": "Creates a new Datatable"
+        },
+        "GUIListbox": {
+            "prefix": "lst",
+            "body": [
+                "UI.Listbox({",
+                "$0 $0 $0 $0 id = \"${1:lstBox}\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(100,80)",
+                "$0 $0 $0 $0 options = [\"option1\", \"option2\"] ",
+                "$0 $0 $0 $0 onOptionSelect = function(option) {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(option);",
+                "$0 $0 $0 $0 }",
+                "});"
+            ],
+            "description": "Creates a new GUILisbox"
+        },
+        "GUIEditbox": {
+            "prefix": "edt",
+            "body": [
+                "UI.Editbox({",
+                "$0 $0 $0 $0 id = \"${1:editBoxID}\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(100,80)",
+                "});"
+            ],
+            "description": "Creates a new GUIEditbox"
+        },
+        "Popup": {
+            "prefix": "pop",
+            "body": [
+                "UI.Popup({",
+                "$0 $0 $0 $0 id = \"${1:popupID}\"  ",
+                "$0 $0 $0 $0 onYes = function() {",
+                "$0 $0 $0 $0 $0 $0 $0 $0",
+                "$0 $0 $0 $0 },",
+                "$0 $0 $0 $0 onNo = function() {",
+                "$0 $0 $0 $0 $0 $0 $0 $0",
+                "$0 $0 $0 $0 },",
+                "$0 $0 $0 $0 onClose = function() {",
+                "$0 $0 $0 $0 $0 $0 $0 $0",
+                "$0 $0 $0 $0 }",
+                "});"
+            ],
+            "description": "Creates a new popup"
+        },
+        "ComboBox": {
+            "prefix": "combo",
+            "body": [
+                "UI.ComboBox({",
+                "$0 $0 $0 $0 id = \"${1:comboBoxID}\"  ",
+                "$0 $0 $0 $0 Size = 150",
+                "$0 $0 $0 $0 options = [\"option1\", \"option2\"] ",
+                "$0 $0 $0 $0 onOptionSelect = function(option) {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(option);",
+                "$0 $0 $0 $0 }",
+                "});"
+            ],
+            "description": "Creates a new ComboBox"
+        },
+        "Tabview": {
+            "prefix": "tabs",
+            "body": [
+                "UI.TabView({",
+                "$0 $0 $0 $0 id = \"${1:newTabviewID}\"  ",
+                "$0 $0 $0 $0 size = VectorScreen(400,300)",
+                "$0 $0 $0 $0 onTabClicked = function(t) {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(t +\" tab clicked\");",
+                "$0 $0 $0 $0 }",
+                "$0 $0 $0 $0 tabs = [ ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 { ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 title = \"tab1\" ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 content = [ ] ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 }, ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 { ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 title = \"tab2\" ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 content = [ ] ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 } ",
+                "$0 $0 $0 $0 ]",
+                "});"
+            ],
+            "description": "Creates a new tabview"
+        },
+        "KeyBind": {
+            "prefix": "kb",
+            "body": [
+                "UI.registerKeyBind({",
+                "$0 $0 $0 $0 name = \"${1:keyName}\"  ",
+                "$0 $0 $0 $0 kp= KeyBind(0x${2})",
+                "$0 $0 $0 $0 onKeyUp = function() {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 ",
+                "$0 $0 $0 $0 }",
+                "$0 $0 $0 $0 onKeyDown = function() {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 ",
+                "$0 $0 $0 $0 }",
+                "});"
+            ],
+            "description": "Registers a new KeyBind"
+        },
+    }
+}

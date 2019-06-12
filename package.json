@@ -1,0 +1,20 @@
+{
+    "name": "decui",
+    "displayName": "decui",
+    "description": "Extension for VCMP's GUI library, DecUI",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.35.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "squirrel",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
