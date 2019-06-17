@@ -1,65 +1,36 @@
-# decui README
+# DecUI vscode extension
 
-This is the README for your extension "decui". After writing up a brief description, we recommend including the following sections.
+This is a vscode extension for the VCMP UI library [DecUI](https://github.com/newk5/decui). It contains many snippets that make it easier to do UI development in VCMP using the DecUI library. You need to have the Squirrel support extension installed for this extension to work. You can get it here [here](https://marketplace.visualstudio.com/items?itemName=deldrid1.SquirrelLanguageExtension).
 
-## Features
+## Snippets
+- **cp** - prints to the console: Console.Print("")
+- **lbl** - creates a new GUILabel
+- **btn** - creates a new GUIButton
+- **prog** : creates a new GUIProgressBar
+- **scroll** : creates a new GUIScrollbar
+- **canv** : creates a new GUICanvas
+- **spr** : creates a new GUISprite
+- **tbl** : creates a new DataTable
+- **lst** : creates a new GUIListbox
+- **window** : creates a new GUIWindow
+- **memo** : creates a new GUIMemobox
+- **edt** : creates a new GUIEditbox
+- **chk** : creates a new GUICheckbox
+- **pop** : creates a new Popup
+- **combo** : creates a new ComboBox
+- **kb** : creates a new KeyBind
+- **tabs** : creates a new Tabview
+ 
+All of the snippets above for creating components have a variant where if you prepend "f" to any of them, it will instead output the code for fetching the component instead of creating the component. 
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+For example, using the **lbl** snippet will output:
+```javascript
+UI.Label({
+   id = "newLabelID"  
+   Text = "labelText" 
+})
+```
+Using **flbl** will output:
+```javascript
+UI.Label("newLabelID")
+```
