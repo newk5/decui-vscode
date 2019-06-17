@@ -8,15 +8,54 @@
             ],
             "description": "Prints to the chat"
         },
+        "GUIProgressBar": {
+            "prefix": "prog",
+            "body": [
+                "UI.ProgressBar({",
+                "$0 $0 $0 $0 id = \"${1:progBarID}\"  ",
+                "})"
+            ],
+            "description": "Creates a new GUIProgressBar"
+        },
+        "GUIScrollbar.": {
+            "prefix": "fscroll",
+            "body": [
+                "UI.Scrollbar(\"${1:scrollBarID}\")"
+            ],
+            "description": "Fetches an existing GUIScrollbar with the corresponding scrollBarID"
+        },
+        "GUIScrollbar": {
+            "prefix": "scroll",
+            "body": [
+                "UI.Scrollbar({",
+                "$0 $0 $0 $0 id = \"${1:scrollBarID}\"  ",
+                "})"
+            ],
+            "description": "Creates a new GUIScrollbar"
+        },
+        "GUIProgressBar.": {
+            "prefix": "fprog",
+            "body": [
+                "UI.ProgressBar(\"${1:progBarID}\")"
+            ],
+            "description": "Fetches an existing GUIProgressBar with the corresponding progBarID"
+        },
         "GUILabel": {
             "prefix": "lbl",
             "body": [
                 "UI.Label({",
                 "$0 $0 $0 $0 id = \"${1:newLabelID}\"  ",
                 "$0 $0 $0 $0 Text = \"${2:labelText}\" ",
-                "});"
+                "})"
             ],
             "description": "Creates a new GUILabel"
+        },
+        "GUILabel.": {
+            "prefix": "flbl",
+            "body": [
+                "UI.Label(\"${1:LabelID}\")"
+            ],
+            "description": "Fetches an existing GUILabel with the corresponding LabelID"
         },
         "GUIBtn": {
             "prefix": "btn",
@@ -27,9 +66,16 @@
                 "$0 $0 $0 $0 onClick = function() {",
                 "$0 $0 $0 $0 $0 $0 $0 $0 ",
                 "$0 $0 $0 $0 }",
-                "});"
+                "})"
             ],
             "description": "Creates a new GUIButton"
+        },
+        "GUIBtn.": {
+            "prefix": "fbtn",
+            "body": [
+                "UI.Button(\"${1:ButtonID}\")"
+            ],
+            "description": "Fetches an existing GUIButton with the corresponding ButtonID"
         },
         "GUICanvas": {
             "prefix": "canv",
@@ -37,9 +83,16 @@
                 "UI.Canvas({",
                 "$0 $0 $0 $0 id = \"${1:newCanvasID}\"  ",
                 "$0 $0 $0 $0 $0 $0 $0 $0 ",
-                "});"
+                "})"
             ],
             "description": "Creates a new GUICanvas"
+        },
+        "GUICanvas.": {
+            "prefix": "fcanv",
+            "body": [
+                "UI.Canvas(\"${1:CanvasID}\")"
+            ],
+            "description": "Fetches an existing GUICanvas with the corresponding CanvasID"
         },
         "GUISprite": {
             "prefix": "spr",
@@ -48,9 +101,16 @@
                 "$0 $0 $0 $0 id = \"${1:newSpriteID}\"  ",
                 "$0 $0 $0 $0 file = \"${2:image.png}\" ",
                 "$0 $0 $0 $0 $0 $0 $0 $0 ",
-                "});"
+                "})"
             ],
             "description": "Creates a new GUISprite"
+        },
+        "GUISprite.": {
+            "prefix": "fspr",
+            "body": [
+                "UI.DataTable(\"${1:SpriteID}\")"
+            ],
+            "description": "Fetches an existing GUISprite with the corresponding SpriteID"
         },
         "DataTable": {
             "prefix": "tbl",
@@ -63,9 +123,16 @@
                 "$0 $0 $0 $0 $0 $0 $0 $0 { header = \"Column2\", field = \"col2\"},",
                 "$0 $0 $0 $0 ]",
                 "$0 $0 $0 $0 data = [ ]",
-                "});"
+                "})"
             ],
             "description": "Creates a new Datatable"
+        },
+        "DataTable.": {
+            "prefix": "ftbl",
+            "body": [
+                "UI.DataTable(\"${1:TableID}\")"
+            ],
+            "description": "Fetches an existing DataTable with the corresponding TableID"
         },
         "GUIListbox": {
             "prefix": "lst",
@@ -75,11 +142,59 @@
                 "$0 $0 $0 $0 Size = VectorScreen(100,80)",
                 "$0 $0 $0 $0 options = [\"option1\", \"option2\"] ",
                 "$0 $0 $0 $0 onOptionSelect = function(option) {",
-                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(option);",
+                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(option)",
                 "$0 $0 $0 $0 }",
-                "});"
+                "})"
             ],
             "description": "Creates a new GUILisbox"
+        },
+        "GUIListbox.": {
+            "prefix": "flst",
+            "body": [
+                "UI.Listbox(\"${1:lstBoxID}\")"
+            ],
+            "description": "Fetches an existing GUIListbox with the corresponding id "
+        },
+        "GUIWindow.": {
+            "prefix": "fwindow",
+            "body": [
+                "UI.Window({",
+                "$0 $0 $0 $0 id = \"${1:windowID}\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(300,400)",
+                "})"
+            ],
+            "description": "Creates a new GUIWindow"
+        },
+        "GUIWindow": {
+            "prefix": "window",
+            "body": [
+                "UI.Window(\"${1:windowID}\")"
+            ],
+            "description": "Fetches an existing GUIWindow with the corresponding windowID"
+        },
+        "GUIMemobox": {
+            "prefix": "memo",
+            "body": [
+                "UI.Memobox({",
+                "$0 $0 $0 $0 id = \"${1:memoboxID}\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(300,400)",
+                "})"
+            ],
+            "description": "Creates a new GUIMemobox"
+        },
+        "GUIMemobox.": {
+            "prefix": "fmemo",
+            "body": [
+                "UI.Memobox(\"${1:memoboxID}\")"
+            ],
+            "description": "Fetches an existing GUIMemobox with the corresponding memoboxID"
+        },
+        "GUIEditbox.": {
+            "prefix": "fedt",
+            "body": [
+                "UI.Editbox(\"${1:editBoxID}\")"
+            ],
+            "description": "Fetches an existing GUIEditbox with the corresponding editBoxID"
         },
         "GUIEditbox": {
             "prefix": "edt",
@@ -87,9 +202,32 @@
                 "UI.Editbox({",
                 "$0 $0 $0 $0 id = \"${1:editBoxID}\"  ",
                 "$0 $0 $0 $0 Size = VectorScreen(100,80)",
-                "});"
+                "})"
             ],
             "description": "Creates a new GUIEditbox"
+        },
+        "GUICheckbox": {
+            "prefix": "chk",
+            "body": [
+                "UI.Checkbox({",
+                "$0 $0 $0 $0 id = \"${1:checkboxID}\"  ",
+                "})"
+            ],
+            "description": "Creates a new GUICheckbox"
+        },
+        "GUICheckbox.": {
+            "prefix": "fchk",
+            "body": [
+                "UI.Checkbox(\"${1:checkboxID}\")"
+            ],
+            "description": "Fetches an existing GUICheckbox with the corresponding checkboxID"
+        },
+        "Popup.": {
+            "prefix": "fpop",
+            "body": [
+                "UI.Popup(\"${1:popupID}\")"
+            ],
+            "description": "Fetches an existing Popup with the corresponding popupID"
         },
         "Popup": {
             "prefix": "pop",
@@ -105,7 +243,7 @@
                 "$0 $0 $0 $0 onClose = function() {",
                 "$0 $0 $0 $0 $0 $0 $0 $0",
                 "$0 $0 $0 $0 }",
-                "});"
+                "})"
             ],
             "description": "Creates a new popup"
         },
@@ -117,11 +255,25 @@
                 "$0 $0 $0 $0 Size = 150",
                 "$0 $0 $0 $0 options = [\"option1\", \"option2\"] ",
                 "$0 $0 $0 $0 onOptionSelect = function(option) {",
-                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(option);",
+                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(option)",
                 "$0 $0 $0 $0 }",
-                "});"
+                "})"
             ],
             "description": "Creates a new ComboBox"
+        },
+        "ComboBox.": {
+            "prefix": "fcombo",
+            "body": [
+                "UI.ComboBox(\"${1:comboBoxID}\")"
+            ],
+            "description": "Fetches an existing ComboBox with the corresponding comboBoxID"
+        },
+        "Tabview.": {
+            "prefix": "ftabs",
+            "body": [
+                "UI.TabView(\"${1:TabViewID}\")"
+            ],
+            "description": "Fetches an existing TabView with the corresponding TabViewID"
         },
         "Tabview": {
             "prefix": "tabs",
@@ -130,7 +282,7 @@
                 "$0 $0 $0 $0 id = \"${1:newTabviewID}\"  ",
                 "$0 $0 $0 $0 size = VectorScreen(400,300)",
                 "$0 $0 $0 $0 onTabClicked = function(t) {",
-                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(t +\" tab clicked\");",
+                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(t +\" tab clicked\")",
                 "$0 $0 $0 $0 }",
                 "$0 $0 $0 $0 tabs = [ ",
                 "$0 $0 $0 $0 $0 $0 $0 $0 { ",
@@ -142,7 +294,7 @@
                 "$0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 content = [ ] ",
                 "$0 $0 $0 $0 $0 $0 $0 $0 } ",
                 "$0 $0 $0 $0 ]",
-                "});"
+                "})"
             ],
             "description": "Creates a new tabview"
         },
@@ -158,9 +310,10 @@
                 "$0 $0 $0 $0 onKeyDown = function() {",
                 "$0 $0 $0 $0 $0 $0 $0 $0 ",
                 "$0 $0 $0 $0 }",
-                "});"
+                "})"
             ],
             "description": "Registers a new KeyBind"
         },
+      
     }
 }
