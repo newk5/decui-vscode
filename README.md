@@ -1,6 +1,6 @@
 # DecUI vscode extension
 
-This is a vscode extension for the VCMP UI library [DecUI](https://github.com/newk5/decui). It contains many snippets that make it easier to do UI development in VCMP using the DecUI library. You need to have the Squirrel support extension installed for this extension to work. You can get it here [here](https://marketplace.visualstudio.com/items?itemName=deldrid1.SquirrelLanguageExtension).
+This is a vscode extension for the VCMP UI library [DecUI](https://github.com/newk5/decui). It contains many snippets that make it easier to do UI development in VCMP using the DecUI library. You need to have the Squirrel support extension installed for this extension to work. You can get it [here](https://marketplace.visualstudio.com/items?itemName=deldrid1.SquirrelLanguageExtension).
 
 ## Snippets
 - **cp** - prints to the console: Console.Print("")
