@@ -25,6 +25,7 @@ All of the snippets above for creating components have a variant where if you pr
 
 For example, using the **lbl** snippet will output:
 ```javascript
+//creates a new label with id: newLabelID
 UI.Label({
    id = "newLabelID"  
    Text = "labelText" 
@@ -32,5 +33,6 @@ UI.Label({
 ```
 Using **flbl** will output:
 ```javascript
+//fetches an existing label with id: newLabelID
 UI.Label("newLabelID")
 ```
