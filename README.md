@@ -4,6 +4,9 @@ This is a vscode extension for the VCMP UI library [DecUI](https://github.com/ne
 
 ## Snippets
 - **cp** - prints to the console: Console.Print("")
+- **vec** - creates a new Vector
+- **col** - creates a new Colour
+- **vs** - creates a new VectorScreen
 - **lbl** - creates a new GUILabel
 - **btn** - creates a new GUIButton
 - **prog** : creates a new GUIProgressBar
