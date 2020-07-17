@@ -205,7 +205,7 @@
         "GUISprite.": {
             "prefix": "fspr",
             "body": [
-                "UI.DataTable(\"${1:SpriteID}\")"
+                "UI.Sprite(\"${1:SpriteID}\")"
             ],
             "description": "Fetches an existing GUISprite with the corresponding SpriteID"
         },
