@@ -57,6 +57,12 @@
             "body": [
                 "UI.ProgressBar({",
                 "$0 $0 $0 $0 id = \"${1:progBarID}\"  ",
+                "$0 $0 $0 $0 align =\"top_center\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(200,30)  ",
+                "$0 $0 $0 $0 StartColour = Colour(111,30,0)  ",
+                "$0 $0 $0 $0 EndColour  = Colour( 180, 110, 110 )  ",
+                "$0 $0 $0 $0 Value  =50  ",
+                "$0 $0 $0 $0 Thickness = 2  ",
                 "})"
             ],
             "description": "Creates a new GUIProgressBar"
