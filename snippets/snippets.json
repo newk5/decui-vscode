@@ -1,6 +1,36 @@
 {
     "scope": "source.squirrel",
     "completions": {
+        "DecUI Component": {
+            "prefix": "comp",
+            "body": [
+                "class ${1} extends DecUIComponent {",
+                "$0 $0 $0 $0 ",
+                "$0 $0 $0 $0 ",
+                "$0 $0 $0 $0 constructor(o) {",
+                "$0 $0 $0 $0 $0 $0 base.constructor(o);",
+                "$0 $0 $0 $0 $0 $0 this.build();",
+                "$0 $0 $0 $0 }",
+                "$0 $0 $0 $0 ",
+                "$0 $0 $0 $0 function build() {",
+                "$0 $0 $0 $0 $0 $0 $0  UI.Canvas({",
+                "$0 $0 $0 $0 $0 $0 $0 $0  $0 $0  id = this.id",
+                "$0 $0 $0 $0 $0 $0 $0 $0  $0 $0  move = this.move",
+                "$0 $0 $0 $0 $0 $0 $0 $0  $0 $0  align = this.align",
+                "$0 $0 $0 $0 $0 $0 $0 $0  $0 $0  Position = this.Position",
+                "$0 $0 $0 $0 $0 $0 $0  })",
+                "$0 $0 $0 $0 }",
+                "$0 $0 $0 $0 ",
+                "$0 $0 $0 $0 ",
+                "}",
+                "UI.registerComponent(\"${1}\", {",
+                "$0 $0 $0 $0 create = function(o) {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 return ${1}(o)",
+                "$0 $0 $0 $0 }",
+                "});"
+            ],
+            "description": "Creates a new DecUI component"
+        },
         "Console.Print": {
             "prefix": "cp",
             "body": [
@@ -78,8 +108,8 @@
             "prefix": "UI",
             "body": [
                 "UI.Scrollbar({",
-                    "$0 $0 $0 $0 id = \"${1:scrollBarID}\"  ",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:scrollBarID}\"  ",
+                "})"
             ],
             "description": "Fetches an existing GUIScrollbar with the corresponding scrollBarID"
         },
@@ -143,12 +173,12 @@
             "prefix": "UI",
             "body": [
                 "UI.Button({",
-                    "$0 $0 $0 $0 id = \"${1:newButtonID}\"  ",
-                    "$0 $0 $0 $0 Text = \"${2:buttonText}\" ",
-                    "$0 $0 $0 $0 onClick = function() {",
-                    "$0 $0 $0 $0 $0 $0 $0 $0 ",
-                    "$0 $0 $0 $0 }",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:newButtonID}\"  ",
+                "$0 $0 $0 $0 Text = \"${2:buttonText}\" ",
+                "$0 $0 $0 $0 onClick = function() {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 ",
+                "$0 $0 $0 $0 }",
+                "})"
             ],
             "description": "Creates a new GUIButton"
         },
@@ -173,9 +203,9 @@
             "prefix": "UI",
             "body": [
                 "UI.Canvas({",
-                    "$0 $0 $0 $0 id = \"${1:newCanvasID}\"  ",
-                    "$0 $0 $0 $0 $0 $0 $0 $0 ",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:newCanvasID}\"  ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 ",
+                "})"
             ],
             "description": "Creates a new GUICanvas"
         },
@@ -190,10 +220,10 @@
             "prefix": "UI",
             "body": [
                 "UI.Sprite({",
-                    "$0 $0 $0 $0 id = \"${1:newSpriteID}\"  ",
-                    "$0 $0 $0 $0 file = \"${2:image.png}\" ",
-                    "$0 $0 $0 $0 $0 $0 $0 $0 ",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:newSpriteID}\"  ",
+                "$0 $0 $0 $0 file = \"${2:image.png}\" ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 ",
+                "})"
             ],
             "description": "Creates a new GUISprite"
         },
@@ -219,14 +249,14 @@
             "prefix": "UI",
             "body": [
                 "UI.DataTable({",
-                    "$0 $0 $0 $0 id = \"${1:newTableID}\"  ",
-                    "$0 $0 $0 $0 rows = ${2:10} ",
-                    "$0 $0 $0 $0 columns = [ ",
-                    "$0 $0 $0 $0 $0 $0 $0 $0 { header = \"Column1\", field = \"col1\"},",
-                    "$0 $0 $0 $0 $0 $0 $0 $0 { header = \"Column2\", field = \"col2\"},",
-                    "$0 $0 $0 $0 ]",
-                    "$0 $0 $0 $0 data = [ ]",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:newTableID}\"  ",
+                "$0 $0 $0 $0 rows = ${2:10} ",
+                "$0 $0 $0 $0 columns = [ ",
+                "$0 $0 $0 $0 $0 $0 $0 $0 { header = \"Column1\", field = \"col1\"},",
+                "$0 $0 $0 $0 $0 $0 $0 $0 { header = \"Column2\", field = \"col2\"},",
+                "$0 $0 $0 $0 ]",
+                "$0 $0 $0 $0 data = [ ]",
+                "})"
             ],
             "description": "Creates a new Datatable"
         },
@@ -256,13 +286,13 @@
             "prefix": "UI",
             "body": [
                 "UI.Listbox({",
-                    "$0 $0 $0 $0 id = \"${1:lstBox}\"  ",
-                    "$0 $0 $0 $0 Size = VectorScreen(100,80)",
-                    "$0 $0 $0 $0 options = [\"option1\", \"option2\"] ",
-                    "$0 $0 $0 $0 onOptionSelect = function(option) {",
-                    "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(option)",
-                    "$0 $0 $0 $0 }",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:lstBox}\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(100,80)",
+                "$0 $0 $0 $0 options = [\"option1\", \"option2\"] ",
+                "$0 $0 $0 $0 onOptionSelect = function(option) {",
+                "$0 $0 $0 $0 $0 $0 $0 $0 Console.Print(option)",
+                "$0 $0 $0 $0 }",
+                "})"
             ],
             "description": "Creates a new GUIListbox"
         },
@@ -301,9 +331,9 @@
             "prefix": "UI",
             "body": [
                 "UI.Window({",
-                    "$0 $0 $0 $0 id = \"${1:windowID}\"  ",
-                    "$0 $0 $0 $0 Size = VectorScreen(300,400)",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:windowID}\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(300,400)",
+                "})"
             ],
             "description": "Creates a new GUIWindow"
         },
@@ -318,9 +348,9 @@
             "prefix": "UI",
             "body": [
                 "UI.Memobox({",
-                    "$0 $0 $0 $0 id = \"${1:memoboxID}\"  ",
-                    "$0 $0 $0 $0 Size = VectorScreen(300,400)",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:memoboxID}\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(300,400)",
+                "})"
             ],
             "description": "Creates a new GUIMemobox"
         },
@@ -352,9 +382,9 @@
             "prefix": "UI",
             "body": [
                 "UI.Editbox({",
-                    "$0 $0 $0 $0 id = \"${1:editBoxID}\"  ",
-                    "$0 $0 $0 $0 Size = VectorScreen(100,80)",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:editBoxID}\"  ",
+                "$0 $0 $0 $0 Size = VectorScreen(100,80)",
+                "})"
             ],
             "description": "Creates a new GUIEditbox"
         },
@@ -381,8 +411,8 @@
             "prefix": "UI",
             "body": [
                 "UI.Checkbox({",
-                    "$0 $0 $0 $0 id = \"${1:checkboxID}\"  ",
-                    "})"
+                "$0 $0 $0 $0 id = \"${1:checkboxID}\"  ",
+                "})"
             ],
             "description": "Creates a new GUICheckbox"
         },
@@ -556,6 +586,5 @@
             ],
             "description": "Registers a new KeyBind"
         }
-      
     }
 }
